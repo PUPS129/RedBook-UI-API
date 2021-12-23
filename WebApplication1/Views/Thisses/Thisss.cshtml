@@ -1,0 +1,55 @@
+﻿@model IEnumerable<WebApplication1.Models.Thiss>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Фото
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Описание
+            </th>
+            <th>
+                Категория
+            </th>
+            <th>
+                Подкласс
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+        <tr>
+            <td width="200">
+
+                <div class="services-wrap d-flex">
+                    <img class=".img" src="~/images/@item.Img" frameborder="0" width="180" height="180" />
+                </div>
+                
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+                
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Descc)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Category.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SubClass.Name)
+            </td>
+
+
+        </tr>
+        }
+    </tbody>
+</table>

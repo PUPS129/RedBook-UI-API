@@ -1,0 +1,19 @@
+﻿@model IEnumerable<WebApplication1.Models.Kingdoms>
+
+<h1>Царства</h1>
+<p>
+    Существуют следующие царства
+</p>
+<table class="table">
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

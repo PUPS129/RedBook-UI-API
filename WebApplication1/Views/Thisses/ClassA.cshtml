@@ -1,0 +1,30 @@
+﻿@model IEnumerable<WebApplication1.Models.ClassA>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Название
+            </th>
+            <th>
+                Откносится к царству
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Kingdom.Name)
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
